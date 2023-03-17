@@ -1,0 +1,2 @@
+!function(){var e=document.querySelector(".form");({form:e,delayInput:e.querySelector('input[name="delay"]'),stepInput:e.querySelector('input[name="step"]'),amountInput:e.querySelector('input[name="amount"]'),btnSubmit:document.querySelector('button[type="submit"]')}).form.addEventListener("submit",(function(e){e.preventDefault(),position,delay,Math.random()}))}();
+//# sourceMappingURL=03-promises.cc4a952e.js.map
