@@ -1,0 +1,2 @@
+({form:document.querySelector(".form"),delay:form.querySelector('input[name="delay"]'),step:form.querySelector('input[name="step"]'),amount:form.querySelector('input[name="amount"]'),btnSubmit:document.querySelector('button[type="submit"]')}).btnSubmit.addEventListener("click",(function e(t,o){Math.random()>.3?e.then((({position:e,delay:t})=>{console.log(`✅ Fulfilled promise ${e} in ${t}ms`)})):e.catch((({position:e,delay:t})=>{console.log(`❌ Rejected promise ${e} in ${t}ms`)}))}));
+//# sourceMappingURL=03-promises.a4436d81.js.map
