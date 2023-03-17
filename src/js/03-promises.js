@@ -6,10 +6,15 @@ const refs = {
   btnSubmit: document.querySelector('button[type="submit"]'),
 };
 
-refs.btnSubmit.addEventListener('click', createPromise);
+refs.form.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+}
 
 function createPromise(position, delay) {
   const shouldResolve = Math.random() > 0.3;
+  delay;
   if (shouldResolve) {
     // Fulfill
     createPromise.then(({ position, delay }) => {
