@@ -1,3 +1,5 @@
+import Notiflix from 'notiflix';
+
 const form = document.querySelector('.form');
 const refs = {
   form,
@@ -23,13 +25,20 @@ function createPromise(position, delay, step, amount) {
 
   promise
     .then(({ position, delay }) => {
-      console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
+      Notiflix.Notify.success(
+        `✅ Fulfilled promise ${position} in ${delay}ms`,
+        {
+          timeout: 5000,
+        }
+      );
       if (position < amount) {
         createPromise(position + 1, delay + step, step, amount);
       }
     })
     .catch(({ position, delay }) => {
-      console.log(`❌ Rejected promise ${position} in ${delay}ms`);
+      Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`, {
+        timeout: 5000,
+      });
       if (position < amount) {
         createPromise(position + 1, delay + step, step, amount);
       }
