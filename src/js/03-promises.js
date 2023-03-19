@@ -28,7 +28,7 @@ function createPromise(position, delay, step, amount) {
       Notiflix.Notify.success(
         `✅ Fulfilled promise ${position} in ${delay}ms`,
         {
-          timeout: 5000,
+          timeout: 8000,
         }
       );
       if (position < amount) {
@@ -37,7 +37,7 @@ function createPromise(position, delay, step, amount) {
     })
     .catch(({ position, delay }) => {
       Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`, {
-        timeout: 5000,
+        timeout: 8000,
       });
       if (position < amount) {
         createPromise(position + 1, delay + step, step, amount);
